@@ -1,0 +1,89 @@
+main {
+  width: 300px;
+  margin: 0 auto;
+}
+
+img {
+  /* imgを行ボックスの底に合わせて配置させる */
+  vertical-align: bottom;
+}
+
+ul {
+  /* liのくろまる除去 */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#main {
+  width: 300px;
+  height: 200px;
+  margin-bottom: 8px;
+}
+
+nav {
+  margin-bottom: 8px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* nav要素に実線をつける */
+nav li {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 12px;
+  padding: 4px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+nav li :hover {
+  background: #f8f8f8;
+}
+
+/* Playボタン */
+#play {
+  width: 140px;
+}
+
+#play a {  
+  color: green;
+} 
+
+ /* 戻るボタン、次へボタン */
+#prev,
+#next {
+  width: 60px;
+}
+
+/* サムネイル要素 */
+.thumbnails {
+  /* サムネイル位置を調整するためにimg要素をグリッドにする */
+  display: grid;
+  /* 5列、幅56pxに設定 */
+  grid-template-columns: repeat(5,56px);
+  /* 余白 */
+  gap:5px;
+} 
+
+.thumbnails li {
+  cursor: pointer;
+  /* サムネイルのデフォルトは薄くしておく */
+  opacity: 0.3;
+}
+
+/* サムネイルにポインターがのった時、
+メインで表示されている画像はサムネイルで色が濃くなるように設定 */
+.thumbnails li:hover,
+.thumbnails li.current {
+  opacity: 1;
+}
+
+.thumbnails img {
+  /* サムネイル画像幅 */
+  width: 56px;
+}
